@@ -69,7 +69,7 @@ export default function Header() {
             <i className='ri-close-large-line text-black text-lg hs-collapse-open:block hidden shrink-0' />
             <span className="sr-only">Toggle</span>
           </button>
-          <button type="button" className="py-3 px-4 sm:inline-flex hidden items-center gap-x-2 text-sm font-medium rounded-lg transition-all duration-200 shadow-sm focus:outline-none focus:border-[#4c47a8] disabled:opacity-50 disabled:pointer-events-none bg-[#3B34BE] border-none text-white hover:bg-[#2D27A9] focus:bg-[#2D27A9]">
+          <button type="button" className="py-3 px-4 sm:inline-flex hidden items-center gap-x-2 text-sm font-medium rounded-lg transition-all duration-200 shadow-sm focus:outline-none focus:border-[#3784d1] disabled:opacity-50 disabled:pointer-events-none border-none bg-[#43A2FE] text-white hover:bg-[#3784d1] focus:bg-[#3784d1]">
             <h3>🚀إنطلق الأن</h3>
           </button>
         </div>
