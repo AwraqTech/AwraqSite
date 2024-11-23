@@ -5,6 +5,9 @@ import PrelineScript from "./components/PrelineScript";
 import Header from "./ui/Header";
 import 'remixicon/fonts/remixicon.css'
 import { IBM_Plex_Sans_Arabic } from 'next/font/google';
+import Footer from "./ui/Footer";
+import PinnedHeader from "./ui/PinnedHeader";
+import { ThemeProvider } from "./context/ThemeContext";
 
 const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   subsets: ['arabic'],
@@ -22,14 +25,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={ibmPlexSansArabic.className}
-      >
-        <PrelineScript />
-        <Header />
-        {children}
-      </body>
-    </html>
+    <ThemeProvider>
+      <html lang="en">
+        <body
+          className={ibmPlexSansArabic.className}
+        >
+          <PrelineScript />
+          <PinnedHeader />
+          <Header />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </ThemeProvider>
   );
 }

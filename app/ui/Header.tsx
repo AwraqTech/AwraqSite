@@ -1,6 +1,11 @@
+"use client"
+
 import React from 'react'
+import { useTheme } from '../context/ThemeContext'
 
 export default function Header() {
+  const { toggleTheme } = useTheme();
+
   return (
     <header className='flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-transparent text-sm py-3 z-50 absolute top-0 left-0 right-0'>
       <nav className='max-w-6xl w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between'>
@@ -21,20 +26,24 @@ export default function Header() {
         </a>
         <div className='hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2'>
           <div className='flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5'>
-            <a className='text-black dark:text-white focus:text-[#3B34BE] hover:text-[#564fd6] cursor-pointer'>
+            <a className='text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer'>
               <h3>الشروط و الأحكام</h3>
             </a>
-            <a className='text-black dark:text-white focus:text-[#3B34BE] hover:text-[#564fd6] cursor-pointer'>
-              <h3>الشروط و الأحكام</h3>
+            <a className='text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer'>
+              <h3>سياسة الخصوصية</h3>
             </a>
-            <a className='text-black dark:text-white focus:text-[#3B34BE] hover:text-[#564fd6] cursor-pointer'>
-              <h3>الشروط و الأحكام</h3>
+            <a className='text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer'>
+              <h3>تواصل معنا</h3>
+            </a>
+            <a className='text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer'>
+              <h3>باقاتنا</h3>
             </a>
           </div>
         </div>
         <div className="sm:order-3 flex items-center gap-x-2">
           <button
             type="button"
+            onClick={toggleTheme}
             className="hs-collapse-toggle relative size-11 flex justify-center items-center gap-x-2 rounded-lg border dark:border-[#364861] border-gray-300 bg-white hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:bg-[#2b3c53] dark:hover:bg-[#3a506e] dark:focus:bg-[#364861]"
             id="hs-navbar-alignment-collapse"
             aria-expanded="false"
