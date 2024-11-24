@@ -1,4 +1,3 @@
-import Image from "next/image";
 import HeroSectionMain from "./ui/HeroSectionMain";
 import FuturesSectionMain from "./ui/FuturesSectionMain";
 import CasherSystemSectionMain from "./ui/CasherSystemSectionMain";
@@ -12,7 +11,7 @@ export default function Home() {
       <HeroSectionMain />
       <FuturesSectionMain />
       <CasherSystemSectionMain />
-      <SubscriptionsSectionMain />
+      <SubscriptionsSectionMain/>
       <FAQSectionMain />
       <CallActionSectionMain />
     </div>

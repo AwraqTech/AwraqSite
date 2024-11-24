@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import React from 'react'
-import useToggleAccordion from '../hooks/useToggleAccordion'
+import React from "react";
+import useToggleAccordion from "../hooks/useToggleAccordion";
 
 interface AccordionMenuProps {
     title: string;
@@ -12,14 +12,14 @@ function AccordionMenu({ title, description }: AccordionMenuProps) {
     const { isOpen, toggleAccordion } = useToggleAccordion();
 
     return (
-        <div className={`hs-accordion ${isOpen ? "active" : ""} w-full max-w-3xl sm:px-0 px-6`} id="hs-basic-heading-one">
+        <div className={`w-full max-w-3xl sm:px-0 px-6`}>
             <button
                 className={`hs-accordion-toggle ${isOpen ? "text-[#43A2FE]" : "text-gray-800"} 
-        py-3 inline-flex justify-end items-center gap-x-3 w-full font-semibold text-start 
-        hover:text-gray-500 focus:outline-none focus:text-gray-500 rounded-lg 
-        disabled:opacity-50 disabled:pointer-events-none 
-        dark:${isOpen ? "text-[#43A2FE]" : "text-neutral-200"} dark:hover:text-neutral-400 
-        dark:focus:text-neutral-400`}
+                    py-3 inline-flex justify-end items-center gap-x-3 w-full font-semibold text-start 
+                    hover:text-gray-500 focus:outline-none focus:text-gray-500 rounded-lg 
+                    disabled:opacity-50 disabled:pointer-events-none 
+                    dark:${isOpen ? "text-[#43A2FE]" : "text-neutral-200"} dark:hover:text-neutral-400 
+                    dark:focus:text-neutral-400`}
                 onClick={toggleAccordion}
                 aria-expanded={isOpen}
                 aria-controls="hs-basic-collapse-one"
@@ -59,8 +59,8 @@ function AccordionMenu({ title, description }: AccordionMenuProps) {
             </button>
             <div
                 id="hs-basic-collapse-one"
-                className={`hs-accordion-content w-full overflow-hidden transition-[height] duration-300 ${isOpen ? "max-h-screen" : "max-h-0"
-                    }`}
+                className={`hs-accordion-content w-full overflow-hidden transition-all duration-300 ease-in-out 
+                    ${isOpen ? "max-h-[1000px]" : "max-h-0"}`}
                 role="region"
                 aria-labelledby="hs-basic-heading-one"
             >
@@ -68,9 +68,9 @@ function AccordionMenu({ title, description }: AccordionMenuProps) {
                     {description}
                 </p>
             </div>
-            <hr className='border-gray-200 dark:border-[#111c2a] mt-6' />
+            <hr className="border-gray-200 dark:border-[#111c2a] mt-6" />
         </div>
-    )
+    );
 }
 
-export default AccordionMenu
+export default AccordionMenu;

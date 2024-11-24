@@ -19,12 +19,12 @@ function SubscriptionsSectionMain() {
     // Trigger fade effect when values change
     useEffect(() => {
         setFadeClass("opacity-0");
-        const timeout = setTimeout(() => setFadeClass("opacity-100"), 200); // Duration of fade effect
-        return () => clearTimeout(timeout); // Cleanup timeout
+        const timeout = setTimeout(() => setFadeClass("opacity-100"), 200);
+        return () => clearTimeout(timeout);
     }, [freemuim, basic, pro]);
 
     return (
-        <div className="flex flex-col justify-center items-center gap-4 w-full max-w-6xl mx-auto mt-12">
+        <div id="subscriptionsSection" className="flex flex-col justify-center items-center gap-4 w-full max-w-6xl mx-auto mt-12">
             {/* Toggle Section */}
             <div className="flex justify-end mb-3">
                 <div id="toggle-count" className="p-1 inline-block rounded-lg dark:bg-[#111c2a] bg-[#f1f1f1]">
@@ -98,7 +98,7 @@ function SubscriptionsSectionMain() {
                         <span className="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium dark:bg-[#b2d9ff] dark:text-[#5386d3] bg-[#43A2FE] text-white">إختيارك الأفضل</span>
                         <span className="flex flex-col justify-start items-end gap-2 mt-8 w-full">
                             <p>عدد المنتجات 2500 منتج</p>
-                            <p>عدد الفروع فرع إثنين فقط</p>
+                            <p>عدد الفروع فرعين إثنين فقط</p>
                             <p className="text-gray-500 dark:text-gray-400">مع كل فرع إضافة 249 ر.س شهريا</p>
                             <p>دعم الفواتير الإلكترونية</p>
                             <p>تطبيق كاشير</p>
@@ -106,8 +106,8 @@ function SubscriptionsSectionMain() {
                             <p>إدارة المخزون</p>
                             <p>إدارة الموردين كحد أقصى 100 مورد</p>
                             <p>إدارة المصروفات</p>
-                            <p>إستقبال 100 طلب يوميا</p>
-                            <p>الحد الأقصى للعملاء 200 عميل</p>
+                            <p>إستقبال 2500 طلب يوميا</p>
+                            <p>الحد الأقصى للعملاء 25,000 عميل</p>
                             <p>إستقبال جميع المدفوعات</p>
                             <p>خاضع لهيئة الزكاة و الضريبة</p>
                         </span>

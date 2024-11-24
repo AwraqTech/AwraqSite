@@ -3,14 +3,18 @@
 import React from 'react'
 import useShowingHeader from '../hooks/useShowingHeader'
 import { useTheme } from '../context/ThemeContext';
+import useScrollTo from '../hooks/useScrollTo';
+import { useSidebar } from '../context/SideBarContext';
 
 export default function PinnedHeader() {
     const { showHeader } = useShowingHeader();
     const { toggleTheme } = useTheme();
+    const handleScroll = useScrollTo();
+    const { toggleSidebar } = useSidebar();
 
     return (
-        <header 
-        className={`flex flex-wrap sm:justify-start backdrop-blur-md dark:bg-[#071321]/80 bg-white/80 sm:flex-nowrap w-full text-sm py-3 z-50 fixed top-0 left-0 transform transition-transform duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"}`}>
+        <header
+            className={`flex flex-wrap sm:justify-start backdrop-blur-md dark:bg-[#071321]/80 bg-white/80 sm:flex-nowrap w-full text-sm py-3 z-50 fixed top-0 left-0 transform transition-transform duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"}`}>
             <nav className='max-w-6xl w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between'>
                 <a
                     className="sm:order-1 flex-none text-xl font-semibold dark:text-white focus:outline-none focus:opacity-80"
@@ -38,9 +42,9 @@ export default function PinnedHeader() {
                         <a className='text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer'>
                             <h3>تواصل معنا</h3>
                         </a>
-                        <a className='text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer'>
+                        <button onClick={handleScroll} className='text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer'>
                             <h3>باقاتنا</h3>
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <div className="sm:order-3 flex items-center gap-x-2">
@@ -68,8 +72,10 @@ export default function PinnedHeader() {
                     >
                         <i className='ri-global-fill text-lg text-black dark:text-white' />
                     </button>
+                    {/* Mobile Menu Button */}
                     <button
                         type="button"
+                        onClick={toggleSidebar}
                         className="sm:hidden hs-collapse-toggle relative size-11 flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:hover:bg-white/90 dark:focus:bg-white/90"
                         id="hs-navbar-alignment-collapse"
                         aria-expanded="false"

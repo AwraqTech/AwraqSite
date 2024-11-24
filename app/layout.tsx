@@ -8,6 +8,8 @@ import { IBM_Plex_Sans_Arabic } from 'next/font/google';
 import Footer from "./ui/Footer";
 import PinnedHeader from "./ui/PinnedHeader";
 import { ThemeProvider } from "./context/ThemeContext";
+import SideBarMobileMenu from "./ui/SideBarMobileMenu";
+import { SidebarProvider } from "./context/SideBarContext";
 
 const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   subsets: ['arabic'],
@@ -26,17 +28,20 @@ export default function RootLayout({
 }>) {
   return (
     <ThemeProvider>
-      <html lang="en">
-        <body
-          className={ibmPlexSansArabic.className}
-        >
-          <PrelineScript />
-          <PinnedHeader />
-          <Header />
-          {children}
-          <Footer />
-        </body>
-      </html>
+      <SidebarProvider>
+        <html lang="en">
+          <body
+            className={ibmPlexSansArabic.className}
+          >
+            <PrelineScript />
+            <PinnedHeader />
+            <Header />
+            <SideBarMobileMenu />
+            {children}
+            <Footer />
+          </body>
+        </html>
+      </SidebarProvider>
     </ThemeProvider>
   );
 }

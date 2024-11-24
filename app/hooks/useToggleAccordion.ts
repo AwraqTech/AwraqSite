@@ -1,16 +1,13 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-function useToggleAccordion() {
+const useToggleAccordion = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleAccordion = () => {
-        setIsOpen((prevState) => !prevState);
+        setIsOpen((prev) => !prev);
     };
 
-    return{
-        isOpen,
-        toggleAccordion
-    }
-}
+    return { isOpen, toggleAccordion };
+};
 
-export default useToggleAccordion
+export default useToggleAccordion;
