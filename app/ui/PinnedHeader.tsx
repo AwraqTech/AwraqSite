@@ -4,7 +4,8 @@ import React from 'react'
 import useShowingHeader from '../hooks/useShowingHeader'
 import { useTheme } from '../context/ThemeContext';
 import useScrollTo from '../hooks/useScrollTo';
-import { useSidebar } from '../context/SideBarContext';
+import { useSidebar } from '../context/SidebarContext';
+import Link from 'next/link';
 
 export default function PinnedHeader() {
     const { showHeader } = useShowingHeader();
@@ -16,9 +17,9 @@ export default function PinnedHeader() {
         <header
             className={`flex flex-wrap sm:justify-start backdrop-blur-md dark:bg-[#071321]/80 bg-white/80 sm:flex-nowrap w-full text-sm py-3 z-50 fixed top-0 left-0 transform transition-transform duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"}`}>
             <nav className='max-w-6xl w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between'>
-                <a
+                <Link
                     className="sm:order-1 flex-none text-xl font-semibold dark:text-white focus:outline-none focus:opacity-80"
-                    href="#"
+                    href="/"
                 >
                     <img
                         src="/awraq-logo.svg"
@@ -30,7 +31,7 @@ export default function PinnedHeader() {
                         className="h-10 object-contain hidden dark:block"
                         alt="Dark Logo"
                     />
-                </a>
+                </Link>
                 <div className='hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2'>
                     <div className='flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5'>
                         <a className='text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer'>

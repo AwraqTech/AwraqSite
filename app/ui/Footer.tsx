@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 function Footer() {
@@ -7,15 +8,19 @@ function Footer() {
                 className="text-xl font-semibold dark:text-white focus:outline-none focus:opacity-80"
                 href="#"
             >
-                <img
+                <Image
                     src="/awraq-logo.svg"
                     className="h-14 object-contain dark:hidden"
                     alt="Logo"
+                    width={1080}
+                    height={1080}
                 />
-                <img
+                <Image
                     src="/dark-awraq-logo.svg"
                     className="h-14 object-contain hidden dark:block"
                     alt="Dark Logo"
+                    width={1080}
+                    height={1080}
                 />
             </a>
             <span className='flex flex-col justify-center items-center gap-2'>

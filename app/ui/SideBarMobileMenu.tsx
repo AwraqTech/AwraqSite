@@ -2,7 +2,9 @@
 
 import React from "react";
 import useScrollTo from "../hooks/useScrollTo";
-import { useSidebar } from "../context/SideBarContext";
+import { useSidebar } from "../context/SidebarContext";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function SideBarMobileMenu() {
     const { isOpen, closeSidebar } = useSidebar();
@@ -31,21 +33,25 @@ export default function SideBarMobileMenu() {
                 aria-label="Sidebar"
             >
                 <div className="px-6">
-                    <a
+                    <Link
                         className="sm:order-1 flex-none text-xl font-semibold dark:text-white focus:outline-none focus:opacity-80"
                         href="#"
                     >
-                        <img
+                        <Image
                             src="/awraq-logo.svg"
                             className="h-10 object-contain dark:hidden"
                             alt="Logo"
+                            width={1080}
+                            height={1080}
                         />
-                        <img
+                        <Image
                             src="/dark-awraq-logo.svg"
                             className="h-10 object-contain hidden dark:block"
                             alt="Dark Logo"
+                            width={1080}
+                            height={1080}
                         />
-                    </a>
+                    </Link>
                 </div>
                 {/* Sidebar content */}
                 <div className="flex flex-col justify-center items-start mt-10 space-y-4 px-6">

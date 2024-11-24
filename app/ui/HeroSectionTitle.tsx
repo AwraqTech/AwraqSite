@@ -11,7 +11,7 @@ function HeroSectionTitle() {
             <button type="button" className="sm:mt-12 mt-0 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-[#43A2FE] text-white hover:bg-[#3784d1] focus:outline-none focus:bg-[#3784d1] disabled:opacity-50 disabled:pointer-events-none dark:bg-[#b2d9ff] dark:text-[#43A2FE] dark:hover:bg-[#a5d2ff] dark:focus:bg-[#a5d2ff]">
                 🚀إنطلق الآن مع 30 يوم مجانا
             </button>
-            <Image src={require('@/public/images/a.jpg')} alt='Hero Image' width={1920} height={1080} className='w-full h-auto bg-cover sm:rounded-xl rounded-lg mt-12' />
+            <Image src='/images/a.jpg' alt='Hero Image' width={1920} height={1080} className='w-full h-auto bg-cover sm:rounded-xl rounded-lg mt-12' />
         </div>
     )
 }

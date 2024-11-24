@@ -11,6 +11,7 @@ export default function useTogglePrice() {
     const toggleAnnualy = () => {
         setIsAnnual(true);
         setPeriod('سنويا');
+        setFreemuim('مجانا')
         setBasic('999');
         setPro('1999');
     };
@@ -18,6 +19,7 @@ export default function useTogglePrice() {
     const toggleMonthly = () => {
         setIsAnnual(false);
         setPeriod('شهريا');
+        setFreemuim('مجانا')
         setBasic('99');
         setPro('199');
     }
