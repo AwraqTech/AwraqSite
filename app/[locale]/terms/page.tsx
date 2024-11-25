@@ -1,57 +1,44 @@
-import React from 'react'
+"use client";
+
+import React from "react";
+import { useTranslations } from "next-intl";
 
 export default function Terms() {
+  const t = useTranslations("TermsPage");
+
+  const renderListItems = (section: string, itemCount: number) =>
+    Array.from({ length: itemCount }, (_, index) => (
+      <li key={index} className="text-gray-500 dark:text-gray-400">
+        {t(`${section}_item${index + 1}`)}
+      </li>
+    ));
+
   return (
-    <div className='flex flex-col justify-start gap-8 pt-28 w-full max-w-6xl mx-auto'>
-      <h1 className='sm:text-4xl text-3xl font-bold text-center'>الشروط والأحكام</h1>
-      <p className='text-gray-500 dark:text-gray-400'>
-        نحرص على أن يكون استخدام منصة أوراق وتجربة المستخدم سلسة ومثالية. لذلك، قمنا بوضع هذه الشروط والأحكام لضمان الالتزام الكامل بها عند التعامل مع المنصة.
-        نود أن نلفت انتباهكم إلى أن مخالفة أي من هذه الشروط قد يؤدي إلى تعليق أو حظر حساب المستخدم المخالف بشكل نهائي دون إشعار مسبق.
-      </p>
-      <div className='gap-4 flex flex-col'>
-        <h1 className='text-2xl font-bold'>1. مقدمة</h1>
-        <p className='text-gray-500 dark:text-gray-400'>
-          منصة أوراق هي منصة تقدم أنظمة محاسبية متكاملة مثل الكاشير وتحاليل المبيعات والمشتريات للتجار أصحاب المحلات التجارية. باستخدامك المنصة، فإنك توافق على الالتزام بكافة الشروط والأحكام المنصوص عليها في هذه السياسة.
-        </p>
+    <div className="flex flex-col justify-start gap-8 pt-28 w-full max-w-6xl mx-auto sm:px-0 px-4">
+      <h1 className="sm:text-4xl text-3xl font-bold text-center">{t("title")}</h1>
+      <p className="text-gray-500 dark:text-gray-400">{t("intro")}</p>
+      <div className="gap-4 flex flex-col">
+        <h1 className="text-2xl font-bold">{t("section1_title")}</h1>
+        <p className="text-gray-500 dark:text-gray-400">{t("section1_content")}</p>
 
-        <h1 className='text-2xl font-bold'>2. تعريفات هامة</h1>
-        <p className='text-gray-500 dark:text-gray-400'>
-          1- <strong>المنصة:</strong> يقصد بها منصة أوراق التي تقدم أنظمة محاسبية وخدمات تحليلية. <br />
-          2- <strong>المستخدم:</strong> هو التاجر أو صاحب المحل التجاري الذي يستفيد من خدمات المنصة. <br />
-          3- <strong>الأنظمة:</strong> هي الخدمات المحاسبية والتحليلية المتاحة للتجار عبر المنصة.
-        </p>
+        <h1 className="text-2xl font-bold">{t("section2_title")}</h1>
+        <ul className="list-disc pl-6">{renderListItems("section2", 3)}</ul>
 
-        <h1 className='text-2xl font-bold'>3. شروط التسجيل</h1>
-        <p className='text-gray-500 dark:text-gray-400'>
-          1- يجب أن يكون المستخدم مؤهلًا قانونيًا لإنشاء حساب على المنصة. <br />
-          2- يلتزم المستخدم بتزويد المنصة ببيانات دقيقة وصحيحة. <br />
-          3- يجب أن يكون عمر المستخدم 18 عامًا على الأقل. <br />
-          4- يتحمل المستخدم مسؤولية الحفاظ على أمان بيانات حسابه.
-        </p>
+        <h1 className="text-2xl font-bold">{t("section3_title")}</h1>
+        <ul className="list-disc pl-6">{renderListItems("section3", 4)}</ul>
 
-        <h1 className='text-2xl font-bold'>4. شروط الاستخدام</h1>
-        <p className='text-gray-500 dark:text-gray-400'>
-          1- يلتزم المستخدم باستخدام المنصة بشكل لا يسبب أي أضرار للمنصة أو لأطراف أخرى. <br />
-          2- يجب ألا يتم استخدام المنصة لأي غرض غير قانوني أو غير أخلاقي. <br />
-          3- يتحمل المستخدم المسؤولية الكاملة عن أي أضرار ناتجة عن إساءة استخدامه للمنصة.
-        </p>
+        <h1 className="text-2xl font-bold">{t("section4_title")}</h1>
+        <ul className="list-disc pl-6">{renderListItems("section4", 3)}</ul>
 
-        <h1 className='text-2xl font-bold'>5. حدود مسؤولية المنصة</h1>
-        <p className='text-gray-500 dark:text-gray-400'>
-          المنصة مسؤولة عن تقديم خدمات محاسبية وتحليلية للتجار، ولكنها لا تتحمل مسؤولية أي أخطاء أو أضرار ناتجة عن إساءة استخدام الأنظمة المقدمة.
-        </p>
+        <h1 className="text-2xl font-bold">{t("section5_title")}</h1>
+        <p className="text-gray-500 dark:text-gray-400">{t("section5_content")}</p>
 
-        <h1 className='text-2xl font-bold'>6. التعديلات والإشعارات</h1>
-        <p className='text-gray-500 dark:text-gray-400'>
-          تحتفظ المنصة بالحق في تعديل هذه السياسة في أي وقت، وسيتم إخطار المستخدمين بأي تغييرات هامة.
-        </p>
+        <h1 className="text-2xl font-bold">{t("section6_title")}</h1>
+        <p className="text-gray-500 dark:text-gray-400">{t("section6_content")}</p>
 
-        <h1 className='text-2xl font-bold'>7. الاتصال بنا</h1>
-        <p className='text-gray-500 dark:text-gray-400'>
-          يسعدنا الرد على استفساراتكم من خلال فريق الدعم الخاص بالمنصة. نعمل على ضمان تجربة مثالية لجميع المستخدمين.
-        </p>
+        <h1 className="text-2xl font-bold">{t("section7_title")}</h1>
+        <p className="text-gray-500 dark:text-gray-400">{t("section7_content")}</p>
       </div>
-
     </div>
-  )
+  );
 }
