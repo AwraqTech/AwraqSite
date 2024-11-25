@@ -15,7 +15,7 @@ function AccordionMenu({ title, description }: AccordionMenuProps) {
         <div className={`w-full max-w-3xl sm:px-0 px-6`}>
             <button
                 className={`hs-accordion-toggle ${isOpen ? "text-[#43A2FE]" : "text-gray-800"} 
-                    py-3 inline-flex justify-end items-center gap-x-3 w-full font-semibold text-start 
+                    py-3 inline-flex justify-start items-center gap-x-3 w-full font-semibold text-start 
                     hover:text-gray-500 focus:outline-none focus:text-gray-500 rounded-lg 
                     disabled:opacity-50 disabled:pointer-events-none 
                     dark:${isOpen ? "text-[#43A2FE]" : "text-neutral-200"} dark:hover:text-neutral-400 
@@ -64,7 +64,7 @@ function AccordionMenu({ title, description }: AccordionMenuProps) {
                 role="region"
                 aria-labelledby="hs-basic-heading-one"
             >
-                <p className="text-gray-800 dark:text-neutral-200 mt-4 text-right">
+                <p className="text-gray-800 dark:text-neutral-200 mt-4">
                     {description}
                 </p>
             </div>

@@ -21,7 +21,7 @@
         "future-five-title": "Digital Invoices",
         "future-five-description": "We provide you with digital invoices for your customers to comply with the requirements of the Zakat Authority.",
         "future-six-title": "24/7 Technical Support",
-        "future-six-description": "We are near to you in your business around the clock with the technical support department always at your service",
+        "future-six-description": "Near to you in your business around the clock with the technical support department always at your service",
         "casher-title": "Software Cashier that everyone is talking about",
         "casher-description": "Our cashier program provides you with all the needs of your employees and they will not need any assistance because:",
         "casher-future-one": "Ease of use and clarity of options",
@@ -92,10 +92,16 @@
         "faq-three-description": "When you subscribe to one of the packages, you will be given the choice of the subscription period, annual or monthly. When the subscription period ends, your account will be frozen until you pay again. There is no automatic withdrawal mechanism when you subscribe to our platform.",
         "faq-four-title": "How can I contact you?",
         "faq-four-description": "You can contact us using one of the options available in the Contact Us box. We are present on all social media channels. You can also contact us via the free phone or via email.",
-        "action-call-title": "Don't miss the opportunity to develop your business and subscribe now",
+        "action-call-title": "Don't miss the opportunity to grow your business",
         "go-action-call": "Go now",
         "footer-title": "Your best platform to manage your business ✨",
         "footer-description": "Awraq platform is a platform that enables traders to manage their business activities with ease and convenience",
-        "footer-copyright": "All rights reserved to Awraq Platform 2024"
+        "footer-copyright": "All rights reserved to Awraq Platform 2024",
+        "sidebar-pricing": "Pricing",
+        "sidebar-contact-us": "Contact Us",
+        "sidebar-privacy": "Privacy and Policy",
+        "sidebar-terms": "Terms and Conditions",
+        "sidebar-go-header": "Go now 🚀",
+        "sidebar-lang": "Change Language"
     }
 }

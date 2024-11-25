@@ -35,15 +35,15 @@ export default function Header() {
         </Link>
         <div className='hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2'>
           <div className='flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5'>
-            <a className='text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer'>
+            <Link href="/terms" className='text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer'>
               <h3>{t("terms")}</h3>
-            </a>
-            <a className='text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer'>
+            </Link>
+            <Link href="/privacy" className='text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer'>
               <h3>{t("privacy")}</h3>
-            </a>
-            <a className='text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer'>
+            </Link>
+            <Link href="/contact-us" className='text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer'>
               <h3>{t("contact-us")}</h3>
-            </a>
+            </Link>
             <button onClick={handleScroll} className='text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer'>
               <h3>{t("pricing")}</h3>
             </button>
@@ -88,9 +88,9 @@ export default function Header() {
           >
             <i className='ri-menu-line text-black text-lg' />
           </button>
-          <button type="button" className="py-3 px-4 sm:inline-flex hidden items-center gap-x-2 text-sm font-medium rounded-lg transition-all duration-200 shadow-sm focus:outline-none focus:border-[#3784d1] disabled:opacity-50 disabled:pointer-events-none border-none bg-[#43A2FE] text-white hover:bg-[#3784d1] focus:bg-[#3784d1]">
+          <a href='https://app.awraq.tech' className="py-3 px-4 sm:inline-flex hidden items-center gap-x-2 text-sm font-medium rounded-lg transition-all duration-200 shadow-sm focus:outline-none focus:border-[#3784d1] disabled:opacity-50 disabled:pointer-events-none border-none bg-[#43A2FE] text-white hover:bg-[#3784d1] focus:bg-[#3784d1]">
             <h3>{t("go-header")}</h3>
-          </button>
+          </a>
         </div>
       </nav>
     </header>

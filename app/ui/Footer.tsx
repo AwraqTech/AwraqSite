@@ -1,7 +1,10 @@
+import { useTranslations } from 'next-intl';
 import Image from 'next/image'
 import React from 'react'
 
 function Footer() {
+    const t = useTranslations("HomePage");
+
     return (
         <div className="flex flex-col justify-center items-center gap-6 w-full max-w-6xl mx-auto mt-12 py-12 sm:px-0 px-4">
             <a
@@ -24,9 +27,9 @@ function Footer() {
                 />
             </a>
             <span className='flex flex-col justify-center items-center gap-2'>
-                <h1 className='text-2xl font-bold'>منصتك الأفضل لإدارة تجارتك ✨</h1>
+                <h1 className='text-2xl font-bold'>{t("footer-title")}</h1>
                 <p className='text-gray-500 dark:text-gray-400 sm:text-right text-center'>
-                    منصة أوراق هي منصة تمكن التجار من إدارة أنشطتهم التجارية بكل سهولة و تيسيير
+                    {t("footer-description")}
                 </p>
             </span>
             <span className='flex flex-row justify-center items-center gap-2 text-[#43A2FE] cursor-pointer'>
@@ -54,7 +57,7 @@ function Footer() {
                 </a>
             </span>
             <p className='text-gray-500 dark:text-gray-400 sm:text-right text-center mt-8'>
-                جميع الحقوق محفوظة لدى منصة أوراق 2024
+                {t("footer-copyright")}
             </p>
         </div>
     )

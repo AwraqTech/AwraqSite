@@ -1,10 +1,10 @@
 import createMiddleware from "next-intl/middleware";
 
 export default createMiddleware({
-    locales: ['en', 'ar'],
-    defaultLocale: 'ar'
+  locales: ["en", "ar"], // Supported locales
+  defaultLocale: "ar",  // Default locale when no locale is provided
 });
 
 export const config = {
-    matcher: ['/', '/(ar|en)/:path*']
+  matcher: ["/((?!_next|api|favicon.ico|.*\\..*).*)"], // Match all routes except static files or APIs
 };

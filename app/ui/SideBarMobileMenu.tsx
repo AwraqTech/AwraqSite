@@ -5,10 +5,14 @@ import useScrollTo from "../hooks/useScrollTo";
 import { useSidebar } from "../context/SidebarContext";
 import Image from "next/image";
 import { Link } from "@/navigation";
+import { useTranslations } from "next-intl";
+import { useToggleLanguage } from "../hooks/useToggleLanguage";
 
 export default function SideBarMobileMenu() {
+    const t = useTranslations("HomePage");
     const { isOpen, closeSidebar } = useSidebar();
     const handleScroll = useScrollTo();
+    const { toggleLanguage } = useToggleLanguage();
 
     const handleScrollAndClose = () => {
         handleScroll();
@@ -55,33 +59,34 @@ export default function SideBarMobileMenu() {
                 </div>
                 {/* Sidebar content */}
                 <div className="flex flex-col justify-center items-start mt-10 space-y-4 px-6">
-                    <a className="text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer">
-                        <h3>الشروط و الأحكام</h3>
-                    </a>
-                    <a className="text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer">
-                        <h3>سياسة الخصوصية</h3>
-                    </a>
-                    <a className="text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer">
-                        <h3>تواصل معنا</h3>
-                    </a>
+                    <Link href="/terms" className="text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer">
+                        <h3>{t("terms")}</h3>
+                    </Link>
+                    <Link href="/privacy" className="text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer">
+                        <h3>{t("sidebar-privacy")}</h3>
+                    </Link>
+                    <Link href="/contact-us" className="text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer">
+                        <h3>{t("sidebar-contact-us")}</h3>
+                    </Link>
                     <button
                         onClick={handleScrollAndClose}
                         className="text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer"
                     >
-                        <h3>باقاتنا</h3>
+                        <h3>{t("sidebar-pricing")}</h3>
                     </button>
-                    <button
-                        type="button"
-                        className="py-3 px-4 w-full items-center gap-x-2 text-sm font-medium rounded-lg transition-all duration-200 shadow-sm focus:outline-none focus:border-[#3784d1] disabled:opacity-50 disabled:pointer-events-none border-none bg-[#43A2FE] text-white hover:bg-[#3784d1] focus:bg-[#3784d1]"
+                    <a
+                        href='https://app.awraq.tech'
+                        className="py-3 px-4 w-full justify-center flex items-center gap-x-2 text-sm font-medium rounded-lg transition-all duration-200 shadow-sm focus:outline-none focus:border-[#3784d1] disabled:opacity-50 disabled:pointer-events-none border-none bg-[#43A2FE] text-white hover:bg-[#3784d1] focus:bg-[#3784d1]"
                     >
-                        <h3>🚀إنطلق الأن</h3>
-                    </button>
+                        <h3>{t("sidebar-go-header")}</h3>
+                    </a>
                     <button
                         type="button"
+                        onClick={toggleLanguage}
                         className="py-3 px-4 w-full flex flex-row justify-center items-center dark:border-[#364861] border-gray-300 bg-white hover:bg-gray-100 dark:bg-[#2b3c53] dark:hover:bg-[#3a506e] dark:focus:bg-[#364861] gap-x-2 text-sm font-medium rounded-lg transition-all duration-200 shadow-sm focus:outline-none disabled:opacity-50 disabled:pointer-events-none border-none"
                     >
                         <i className="ri-global-fill text-lg text-black dark:text-white" />
-                        <h3>تغيير اللغة</h3>
+                        <h3>{t("sidebar-lang")}</h3>
                     </button>
                 </div>
             </div>
