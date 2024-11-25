@@ -9,6 +9,7 @@ import SideBarMobileMenu from "../ui/SideBarMobileMenu";
 import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import ClientWrapper from "./layouts/ClientLayout";
 import "./globals.css";
+import { headers } from "next/headers";
 
 // Load font
 const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
@@ -30,17 +31,18 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = params?.locale;
+  const { locale } = await params;
 
-  // Validate locale
-  if (!locale || !locales.includes(locale)) {
-    notFound(); // Render 404 page for unsupported locales
+  const header = headers();
+  const localeHeader = (await header).get('x-next-intl-locale');
+  if (localeHeader === null) {
+    notFound();
   }
 
-  const messages = await getMessages(params); // Load locale-specific messages
-  const isArabic = locale === "ar"; // Check for Arabic
+  const messages = await getMessages({ locale })
+  const isArabic = locale === "ar";
 
   return (
     <NextIntlClientProvider messages={messages}>
