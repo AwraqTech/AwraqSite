@@ -5,7 +5,7 @@ import useShowingHeader from '../hooks/useShowingHeader'
 import { useTheme } from '../context/ThemeContext';
 import useScrollTo from '../hooks/useScrollTo';
 import { useSidebar } from '../context/SidebarContext';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 
 export default function PinnedHeader() {
     const { showHeader } = useShowingHeader();

@@ -4,7 +4,7 @@ import React from "react";
 import useScrollTo from "../hooks/useScrollTo";
 import { useSidebar } from "../context/SidebarContext";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/navigation";
 
 export default function SideBarMobileMenu() {
     const { isOpen, closeSidebar } = useSidebar();
