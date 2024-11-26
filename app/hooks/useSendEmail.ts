@@ -39,12 +39,12 @@ export default function useSendEmail() {
                 to_email: 'care@awraq.tech',
             };
 
-            const response = await emailjs.send(
+            await emailjs.send(
                 'service_9dm0p7k',
                 'template_7ns87pf',
                 templateParams,
                 'BUyNOh84kVBqHsCVT'
-            )
+            );
 
             setSuccess(true);
 
@@ -57,12 +57,18 @@ export default function useSendEmail() {
                 setSuccess(false);
             }, 5000)
 
-        } catch (error) {
+        } catch (error: unknown) {
             setFailed(true);
+
+            if (error instanceof Error) {
+                setErrorMessage(error.message);
+            } else {
+                setErrorMessage('حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى.');
+            }
+
             setTimeout(() => {
                 setSuccess(false);
-            }, 5000)
-            setErrorMessage('حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى.')
+            }, 5000);
         } finally {
             setIsSubmitting(false)
         }

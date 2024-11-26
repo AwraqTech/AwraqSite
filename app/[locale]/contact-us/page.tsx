@@ -18,7 +18,6 @@ export default function ContactUs() {
     inquiry,
     setInquiry,
     isSubmitting,
-    errorMessage,
     handleSubmit,
     success,
     failed
