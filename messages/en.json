@@ -167,5 +167,19 @@
         "privacy_section8_content": "If you have any inquiries or complaints regarding the Privacy Policy, you can contact our support team through the available channels on the platform.",
         "privacy_section9_title": "9. Governing Laws",
         "privacy_section9_content": "This Privacy Policy is governed by the laws of Saudi Arabia. In case of disputes, they will be resolved by the competent authorities."
+    },
+    "contactUs": {
+        "title": "Contact Us Now",
+        "description": "Fill out the fields below to submit your request, and we will be happy to assist you.",
+        "emailLabel": "Email",
+        "nameLabel": "Full Name",
+        "phoneLabel": "Phone Number",
+        "inquiryLabel": "Write your inquiry here",
+        "submitButton": "Submit",
+        "successMessageTitle": "Message Sent",
+        "successMessage": "Thank you for your interest, we look forward to serving you soon. A customer service representative will contact you shortly.",
+        "failureMessageTitle": "Error!",
+        "failureMessage": "Sorry, there was an error while sending the message. Please try again.",
+        "sendButton": "Send your inquiry"
     }
 }

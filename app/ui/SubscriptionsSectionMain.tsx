@@ -54,14 +54,14 @@ function SubscriptionsSectionMain() {
             </div>
 
             {/* Pricing Cards */}
-            <div className="grid sm:grid-cols-3 grid-cols-1 justify-between items-start w-full gap-6 sm:px-0 px-4">
+            <div className="grid md:grid-cols-3 grid-cols-1 justify-between items-start w-full gap-6 md:px-0 px-4">
                 {/* Freemium Plan */}
                 <div className="flex flex-col h-full justify-between items-center rounded-xl gap-4 dark:bg-[#111c2a] bg-[#f1f1f1] p-8 cursor-pointer hover:scale-[1.01] transition-all duration-300">
                     <div className="flex flex-col justify-center items-center gap-4 w-full">
-                        <h3 className="font-bold sm:text-right text-center">{t("freemuim-title")}</h3>
+                        <h3 className="font-bold md:text-right text-center">{t("freemuim-title")}</h3>
                         <span className="flex flex-row justify-center items-start gap-4">
                             <h1
-                                className={`font-bold sm:text-5xl text-4xl text-center transition-opacity duration-200 ${fadeClass}`}
+                                className={`font-bold md:text-5xl text-4xl text-center transition-opacity duration-200 ${fadeClass}`}
                             >
                                 {freemuim}
                             </h1>
@@ -80,7 +80,7 @@ function SubscriptionsSectionMain() {
                             <p>{t("freemuim-future-10")}</p>
                         </span>
                     </div>
-                    <a href='https://app.awraq.tech' className="sm:mt-12 w-full mt-0 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-[#43A2FE] text-white hover:bg-[#3784d1] focus:outline-none focus:bg-[#3784d1] disabled:opacity-50 disabled:pointer-events-none dark:bg-[#b2d9ff] dark:text-[#43A2FE] dark:hover:bg-[#a5d2ff] dark:focus:bg-[#a5d2ff]">
+                    <a href='https://app.awraq.tech' className="md:mt-12 w-full mt-0 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-[#43A2FE] text-white hover:bg-[#3784d1] focus:outline-none focus:bg-[#3784d1] disabled:opacity-50 disabled:pointer-events-none dark:bg-[#b2d9ff] dark:text-[#43A2FE] dark:hover:bg-[#a5d2ff] dark:focus:bg-[#a5d2ff]">
                         {t("go-packages")}
                     </a>
                 </div>
@@ -88,10 +88,10 @@ function SubscriptionsSectionMain() {
                 {/* Basic Plan */}
                 <div className="flex flex-col h-full justify-between items-center rounded-xl gap-4 dark:bg-[#111c2a] bg-[#f1f1f1] p-8 cursor-pointer hover:scale-[1.01] transition-all duration-300">
                     <div className="flex flex-col justify-center items-center gap-4 w-full">
-                        <h3 className="font-bold sm:text-right text-center">{t("basic-title")}</h3>
+                        <h3 className="font-bold md:text-right text-center">{t("basic-title")}</h3>
                         <div className="flex flex-row justify-center items-start gap-4">
                             <h1
-                                className={`font-bold sm:text-5xl text-4xl text-center transition-opacity duration-200 ${fadeClass}`}
+                                className={`font-bold md:text-5xl text-4xl text-center transition-opacity duration-200 ${fadeClass}`}
                             >
                                 {basic}
                             </h1>
@@ -114,7 +114,7 @@ function SubscriptionsSectionMain() {
                             <p>{t("basic-future-13")}</p>
                         </span>
                     </div>
-                    <a href='https://app.awraq.tech' className="sm:mt-12 w-full mt-0 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-[#43A2FE] text-white hover:bg-[#3784d1] focus:outline-none focus:bg-[#3784d1] disabled:opacity-50 disabled:pointer-events-none dark:bg-[#b2d9ff] dark:text-[#43A2FE] dark:hover:bg-[#a5d2ff] dark:focus:bg-[#a5d2ff]">
+                    <a href='https://app.awraq.tech' className="md:mt-12 w-full mt-0 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-[#43A2FE] text-white hover:bg-[#3784d1] focus:outline-none focus:bg-[#3784d1] disabled:opacity-50 disabled:pointer-events-none dark:bg-[#b2d9ff] dark:text-[#43A2FE] dark:hover:bg-[#a5d2ff] dark:focus:bg-[#a5d2ff]">
                         {t("go-packages")}
                     </a>
                 </div>
@@ -122,10 +122,10 @@ function SubscriptionsSectionMain() {
                 {/* Pro Plan */}
                 <div className="flex flex-col justify-between items-center rounded-xl gap-4 dark:bg-[#111c2a] bg-[#f1f1f1] p-8 cursor-pointer hover:scale-[1.01] transition-all duration-300">
                     <div className="flex flex-col justify-center items-center gap-4 w-full">
-                        <h3 className="font-bold sm:text-right text-center">{t("pro-title")}</h3>
+                        <h3 className="font-bold md:text-right text-center">{t("pro-title")}</h3>
                         <div className="flex flex-row justify-center items-start gap-4">
                             <h1
-                                className={`font-bold sm:text-5xl text-4xl text-center transition-opacity duration-200 ${fadeClass}`}
+                                className={`font-bold md:text-5xl text-4xl text-center transition-opacity duration-200 ${fadeClass}`}
                             >
                                 {pro}
                             </h1>
@@ -149,7 +149,7 @@ function SubscriptionsSectionMain() {
                             <p>{t("pro-future-15")}</p>
                         </span>
                     </div>
-                    <a href='https://app.awraq.tech' className="sm:mt-12 w-full mt-0 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-[#43A2FE] text-white hover:bg-[#3784d1] focus:outline-none focus:bg-[#3784d1] disabled:opacity-50 disabled:pointer-events-none dark:bg-[#b2d9ff] dark:text-[#43A2FE] dark:hover:bg-[#a5d2ff] dark:focus:bg-[#a5d2ff]">
+                    <a href='https://app.awraq.tech' className="md:mt-12 w-full mt-0 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-[#43A2FE] text-white hover:bg-[#3784d1] focus:outline-none focus:bg-[#3784d1] disabled:opacity-50 disabled:pointer-events-none dark:bg-[#b2d9ff] dark:text-[#43A2FE] dark:hover:bg-[#a5d2ff] dark:focus:bg-[#a5d2ff]">
                         {t("go-packages")}
                     </a>
                 </div>

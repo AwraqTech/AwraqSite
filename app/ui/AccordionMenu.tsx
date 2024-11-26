@@ -12,7 +12,7 @@ function AccordionMenu({ title, description }: AccordionMenuProps) {
     const { isOpen, toggleAccordion } = useToggleAccordion();
 
     return (
-        <div className={`w-full max-w-3xl sm:px-0 px-6`}>
+        <div className={`w-full max-w-3xl md:px-0 px-6`}>
             <button
                 className={`hs-accordion-toggle ${isOpen ? "text-[#43A2FE]" : "text-gray-800"} 
                     py-3 inline-flex justify-start items-center gap-x-3 w-full font-semibold text-start 

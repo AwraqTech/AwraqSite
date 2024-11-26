@@ -14,8 +14,8 @@ export default function Privacy() {
     ));
 
   return (
-    <div className="flex flex-col justify-start gap-8 pt-28 w-full max-w-6xl mx-auto sm:px-0 px-4">
-      <h1 className="sm:text-4xl text-3xl font-bold text-center">{t("privacy_title")}</h1>
+    <div className="flex flex-col justify-start gap-8 pt-28 w-full max-w-6xl mx-auto md:px-0 px-4">
+      <h1 className="md:text-4xl text-3xl font-bold text-center">{t("privacy_title")}</h1>
       <p className="text-gray-500 dark:text-gray-400">{t("privacy_intro")}</p>
 
       <h1 className="text-2xl font-bold">{t("privacy_section1_title")}</h1>

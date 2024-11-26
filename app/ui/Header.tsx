@@ -16,10 +16,10 @@ export default function Header() {
   const { toggleLanguage } = useToggleLanguage();
 
   return (
-    <header className='flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-transparent text-sm py-3 z-50 absolute top-0 left-0 right-0'>
+    <header className='flex flex-wrap md:justify-start md:flex-nowrap w-full bg-transparent text-sm py-3 z-50 absolute top-0 left-0 right-0'>
       <nav className='max-w-6xl w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between'>
         <Link
-          className="sm:order-1 flex-none text-xl font-semibold dark:text-white focus:outline-none focus:opacity-80"
+          className="md:order-1 flex-none text-xl font-semibold dark:text-white focus:outline-none focus:opacity-80"
           href="/"
         >
           <img
@@ -33,8 +33,8 @@ export default function Header() {
             alt="Dark Logo"
           />
         </Link>
-        <div className='hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2'>
-          <div className='flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5'>
+        <div className='hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:grow-0 md:basis-auto md:block md:order-2'>
+          <div className='flex flex-col gap-5 mt-5 md:flex-row md:items-center md:mt-0 md:ps-5'>
             <Link href="/terms" className='text-black dark:text-white focus:text-[#43A2FE] hover:text-[#43A2FE] cursor-pointer'>
               <h3>{t("terms")}</h3>
             </Link>
@@ -49,7 +49,7 @@ export default function Header() {
             </button>
           </div>
         </div>
-        <div className="sm:order-3 flex items-center gap-x-2">
+        <div className="md:order-3 flex items-center gap-x-2">
           <button
             type="button"
             onClick={toggleTheme}
@@ -66,7 +66,7 @@ export default function Header() {
           <button
             type="button"
             onClick={toggleLanguage}
-            className="sm:flex hidden hs-collapse-toggle relative size-11 justify-center items-center gap-x-2 rounded-lg border dark:border-[#364861] border-gray-300 bg-white hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:bg-[#2b3c53] dark:hover:bg-[#3a506e] dark:focus:bg-[#364861]"
+            className="md:flex hidden hs-collapse-toggle relative size-11 justify-center items-center gap-x-2 rounded-lg border dark:border-[#364861] border-gray-300 bg-white hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:bg-[#2b3c53] dark:hover:bg-[#3a506e] dark:focus:bg-[#364861]"
             id="hs-navbar-alignment-collapse"
             aria-expanded="false"
             aria-controls="hs-navbar-alignment"
@@ -79,7 +79,7 @@ export default function Header() {
           <button
             type="button"
             onClick={toggleSidebar}
-            className="sm:hidden hs-collapse-toggle relative size-11 flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:hover:bg-white/90 dark:focus:bg-white/90"
+            className="md:hidden hs-collapse-toggle relative size-11 flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:hover:bg-white/90 dark:focus:bg-white/90"
             id="hs-navbar-alignment-collapse"
             aria-expanded="false"
             aria-controls="hs-navbar-alignment"
@@ -88,7 +88,7 @@ export default function Header() {
           >
             <i className='ri-menu-line text-black text-lg' />
           </button>
-          <a href='https://app.awraq.tech' className="py-3 px-4 sm:inline-flex hidden items-center gap-x-2 text-sm font-medium rounded-lg transition-all duration-200 shadow-sm focus:outline-none focus:border-[#3784d1] disabled:opacity-50 disabled:pointer-events-none border-none bg-[#43A2FE] text-white hover:bg-[#3784d1] focus:bg-[#3784d1]">
+          <a href='https://app.awraq.tech' className="py-3 px-4 md:inline-flex hidden items-center gap-x-2 text-sm font-medium rounded-lg transition-all duration-200 shadow-sm focus:outline-none focus:border-[#3784d1] disabled:opacity-50 disabled:pointer-events-none border-none bg-[#43A2FE] text-white hover:bg-[#3784d1] focus:bg-[#3784d1]">
             <h3>{t("go-header")}</h3>
           </a>
         </div>

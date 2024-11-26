@@ -6,7 +6,7 @@ function FAQSectionMain() {
   const t = useTranslations("HomePage");
   return (
     <div className="flex flex-col justify-center items-center gap-4 w-full max-w-6xl mx-auto mt-12">
-        <h1 className='sm:text-4xl text-3xl font-bold sm:px-0 px-4'>{t("faq-title")}</h1>
+        <h1 className='md:text-4xl text-3xl font-bold md:px-0 px-4'>{t("faq-title")}</h1>
         <AccordionMenu 
         title={t("faq-one-title")}
         description={t("faq-one-description")}
