@@ -65,7 +65,10 @@ function SubscriptionsSectionMain() {
                             >
                                 {freemuim}
                             </h1>
-                            <p className="text-gray-500 dark:text-gray-400">{t("freemuim-period-monthly")}</p>
+                            <span className="flex flex-col justify-start items-start gap-1">
+                                <p className="text-gray-500 dark:text-gray-400">{t("freemuim-period-monthly")}</p>
+                                <p className="text-gray-500 dark:text-gray-400">{t("vatIncluded")}</p>
+                            </span>
                         </span>
                         <span className="flex flex-col justify-start items-start gap-2 mt-8 w-full">
                             <p>{t("freemuim-future-1")}</p>
@@ -95,7 +98,10 @@ function SubscriptionsSectionMain() {
                             >
                                 {basic}
                             </h1>
-                            <p className="text-gray-500 dark:text-gray-400">{t("basic-price-currency")} / {period}</p>
+                            <span className="flex flex-col justify-start items-start gap-1">
+                                <p className="text-gray-500 dark:text-gray-400">{t("basic-price-currency")} / {period}</p>
+                                <p className="text-gray-500 dark:text-gray-400">{t("vatIncluded")}</p>
+                            </span>
                         </div>
                         <span className="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium dark:bg-[#b2d9ff] dark:text-[#5386d3] bg-[#43A2FE] text-white">{t("basic-badge")}</span>
                         <span className="flex flex-col justify-start items-start gap-2 mt-8 w-full">
@@ -129,7 +135,10 @@ function SubscriptionsSectionMain() {
                             >
                                 {pro}
                             </h1>
-                            <p className="text-gray-500 dark:text-gray-400">{t("pro-price-currency")} / {period}</p>
+                            <span className="flex flex-col justify-start items-start gap-1">
+                                <p className="text-gray-500 dark:text-gray-400">{t("pro-price-currency")} / {period}</p>
+                                <p className="text-gray-500 dark:text-gray-400">{t("vatIncluded")}</p>
+                            </span>
                         </div>
                         <span className="flex flex-col justify-start items-start gap-2 mt-8 w-full">
                             <p>{t("pro-future-1")}</p>

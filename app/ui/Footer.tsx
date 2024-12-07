@@ -33,13 +33,13 @@ function Footer() {
                 </p>
             </span>
             <span className='flex flex-row justify-center items-center gap-2 text-[#43A2FE] cursor-pointer'>
-                <a href="https://x.com/awraqit">
+                <a href="https://x.com/TryAwraq">
                     <i className='ri-twitter-x-line text-xl hover:text-[#3784d1]' />
                 </a>
-                <a href="https://instagram.com">
+                <a href="https://www.instagram.com/tryawraq/">
                     <i className='ri-instagram-line text-xl hover:text-[#3784d1]' />
                 </a>
-                <a href="https://facebook.com">
+                <a href="https://www.facebook.com/profile.php?id=61569666781621">
                     <i className='ri-facebook-box-line text-xl hover:text-[#3784d1]' />
                 </a>
                 <a href="https://linkedin.com">

@@ -7,32 +7,26 @@ export default function useShowingHeader() {
     const [lastScroll, setLastScroll] = useState(0);
 
     useEffect(() => {
-        let timeout: NodeJS.Timeout;
-
         const handleScroll = () => {
-            clearTimeout(timeout);
-            timeout = setTimeout(() => {
-                const currentScroll = window.scrollY;
+            const currentScroll = window.scrollY;
 
-                if (currentScroll > 50) {
-                    // Show the header when scrolling down
-                    if (currentScroll > lastScroll && !showHeader) {
-                        setShowHeader(true);
-                    }
-                    // Hide the header when scrolling up
-                    if (currentScroll < lastScroll && showHeader) {
-                        setShowHeader(false);
-                    }
+            if (currentScroll < 50) {
+                setShowHeader(false);
+            } else {
+                if (currentScroll > lastScroll && !showHeader) {
+                    setShowHeader(true);
                 }
+                if (currentScroll < lastScroll && showHeader) {
+                    setShowHeader(false);
+                }
+            }
 
-                setLastScroll(currentScroll);
-            }, 100);
+            setLastScroll(currentScroll);
         };
 
         window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll);
-            clearTimeout(timeout);
         };
     }, [lastScroll, showHeader]);
 
