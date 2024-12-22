@@ -8,7 +8,7 @@ export default function FuturesSectionMain() {
     
     return (
         <div className='flex flex-col justify-center items-center gap-4 w-full max-w-6xl mx-auto mt-12'>
-            <h1 className='md:text-4xl text-3xl font-bold md:px-0 px-4'>{t("future-title")}</h1>
+            <h1 className='md:text-4xl text-3xl font-bold md:px-0 px-4 text-center'>{t("future-title")}</h1>
             <p className='text-center text-gray-500 dark:text-gray-400 md:px-0 px-4'>{t("future-description")}</p>
             <div className='grid md:grid-cols-3 grid-cols-1 justify-between items-center w-full gap-6 md:px-0 px-4'>
                 <div className='flex flex-col justify-center items-center rounded-xl gap-4 dark:bg-[#111c2a] bg-[#f1f1f1] p-8 h-full'>

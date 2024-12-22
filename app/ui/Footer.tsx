@@ -27,7 +27,7 @@ function Footer() {
                 />
             </a>
             <span className='flex flex-col justify-center items-center gap-2'>
-                <h1 className='text-2xl font-bold'>{t("footer-title")}</h1>
+                <h1 className='text-2xl font-bold text-center'>{t("footer-title")}</h1>
                 <p className='text-gray-500 dark:text-gray-400 md:text-right text-center'>
                     {t("footer-description")}
                 </p>
