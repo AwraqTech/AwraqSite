@@ -10,6 +10,7 @@ import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import ClientWrapper from "./layouts/ClientLayout";
 import "./globals.css";
 import { headers } from "next/headers";
+import { fetchOGContent } from "../hooks/openGraphCMS";
 
 const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   subsets: ["arabic"],
@@ -41,6 +42,8 @@ export default async function RootLayout({
 
   const messages = await getMessages({ locale });
   const isArabic = locale === "ar";
+
+  const ogContent = fetchOGContent();
 
   return (
     <NextIntlClientProvider messages={messages}>
@@ -92,12 +95,12 @@ export default async function RootLayout({
 
           {/* Twitter Card Meta Tags */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Awraq Tech | منصة أوراق" />
+          <meta name="twitter:title" content={(await ogContent).title} />
           <meta
             name="twitter:description"
-            content="منصة أوراق هي منصة تمكن التجار من إدارة أنشطتهم التجارية بكل سهولة و تيسيير"
+            content={(await ogContent).description}
           />
-          <meta name="twitter:image" content="https://i.ibb.co/JjyMdv8/Frame-3.png" />
+          <meta name="twitter:image" content={(await ogContent).imageUrl} />
           <meta name="twitter:site" content="@TryAwraq" />
 
           {/* Facebook Pixel */}
